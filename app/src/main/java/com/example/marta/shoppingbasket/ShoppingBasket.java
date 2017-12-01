@@ -23,4 +23,8 @@ public class ShoppingBasket {
     public void add(Purchasable item) {
         boughtItems.add(item);
     }
+
+    public void remove(Purchasable item) {
+        boughtItems.remove(item);
+    }
 }
