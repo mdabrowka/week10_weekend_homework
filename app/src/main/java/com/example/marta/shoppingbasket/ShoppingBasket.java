@@ -10,10 +10,13 @@ public class ShoppingBasket {
     private ArrayList<Purchasable> boughtItems;
 
 
+
     public ShoppingBasket() {
         boughtItems = new ArrayList();
     }
 
 
-
+    public int numberOfItems() {
+      return boughtItems.size();
+    }
 }
