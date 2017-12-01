@@ -5,4 +5,13 @@ package com.example.marta.shoppingbasket;
  */
 
 public class Item implements Purchasable {
+    private double price;
+
+    public Item(double price) {
+        this.price = price;
+    }
+
+    public double getPrice() {
+        return this.price;
+    }
 }
