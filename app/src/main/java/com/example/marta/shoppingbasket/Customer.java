@@ -13,5 +13,7 @@ public class Customer {
     }
 
 
-
+    public boolean isLoyal() {
+        return this.loyaltyCard;
+    }
 }
