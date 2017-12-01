@@ -19,4 +19,8 @@ public class ShoppingBasket {
     public int numberOfItems() {
       return boughtItems.size();
     }
+
+    public void add(Purchasable item) {
+        boughtItems.add(item);
+    }
 }

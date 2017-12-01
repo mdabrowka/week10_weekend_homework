@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertFalse;
 
 /**
  * Created by marta on 01/12/2017.
@@ -25,6 +26,13 @@ public class ShoppingBasketTest {
     @Test
     public void testShoppingBasketStartsEmpty() {
         assertEquals(0, basket.numberOfItems());
+    }
+
+    @Test
+    public void testCanAddItems() {
+        basket.add(item1);
+        basket.add(item2);
+        assertEquals(2, basket.numberOfItems());
     }
 
 }
