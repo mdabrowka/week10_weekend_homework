@@ -18,9 +18,9 @@ public class ShoppingBasketTest {
     @Before
     public void before() {
         basket = new ShoppingBasket();
-        item1 = new Item(10);
-        item2 = new Item(5);
-        item3 = new Item(7);
+        item1 = new Item(10, "oranges");
+        item2 = new Item(5, "apples");
+        item3 = new Item(7, "strawberry");
     }
 
     @Test

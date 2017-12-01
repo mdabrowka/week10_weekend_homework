@@ -7,4 +7,6 @@ package com.example.marta.shoppingbasket;
 public interface Purchasable {
 
     public double getPrice();
+
+    public String getType();
 }
