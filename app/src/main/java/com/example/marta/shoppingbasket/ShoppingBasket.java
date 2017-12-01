@@ -32,4 +32,12 @@ public class ShoppingBasket {
         boughtItems.clear();
     }
 
+    public double totalPrice() {
+        double total = 0;
+        for (Purchasable item : boughtItems) {
+          total += item.getPrice();
+        }
+        return total;
+    }
+
 }

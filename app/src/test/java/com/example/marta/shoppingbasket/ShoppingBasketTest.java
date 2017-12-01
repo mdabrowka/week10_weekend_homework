@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertFalse;
+
 
 /**
  * Created by marta on 01/12/2017.
@@ -18,8 +18,8 @@ public class ShoppingBasketTest {
     @Before
     public void before() {
         basket = new ShoppingBasket();
-        item1 = new Item(10, "oranges");
-        item2 = new Item(5, "apples");
+        item1 = new Item(10, "orange");
+        item2 = new Item(5, "apple");
         item3 = new Item(7, "strawberry");
     }
 
@@ -51,6 +51,14 @@ public class ShoppingBasketTest {
         basket.add(item3);
         basket.emptyBasket();
         assertEquals(0, basket.numberOfItems());
+    }
+
+    @Test
+    public void testCanCalculateTotal() {
+        basket.add(item1);
+        basket.add(item2);
+        basket.add(item3);
+        assertEquals(22, basket.totalPrice(), 0.0);
     }
 
 }
