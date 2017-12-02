@@ -56,7 +56,7 @@ public class ItemTest {
 
     @Test
     public void testApplyTwoForOneDiscount() {
-        assertEquals(24, item.applyTwoForOneDiscount(), 0.0);
-        assertEquals(12, item1.applyTwoForOneDiscount(), 0.0);
+        assertEquals(24, item.calculatePriceAfterTwoForOneDiscount(), 0.0);
+        assertEquals(12, item1.calculatePriceAfterTwoForOneDiscount(), 0.0);
     }
 }
