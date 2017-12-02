@@ -36,12 +36,21 @@ public class Item implements Purchasable, Discountable {
         return false;
     }
 
+    public double applyTwoForOneDiscount() {
+        double totalPrice = 0.0;
+        if (quantityDivisableByTwo() == true) {
+            totalPrice = ((quantity / 2) * price);
+        }
+        return totalPrice;
+    }
 
-//    public double applyTwoForOneDiscount() {
-//        double totalPrice = 0.0;
-//        if (quantityDivisableByTwo() == true) {
-//            totalPrice = ((quantity / 2) * price);
-//        }
-//        return totalPrice;
-//    }
+    public double applyDiscountTwoForOneWithModulus() {
+        double totalPrice = 0.0;
+        if (quantityDivisableByTwo() == false) {
+            totalPrice = ((((quantity - 1)/2) + 1) * price);
+        }
+        return totalPrice;
+    }
+
+
 }

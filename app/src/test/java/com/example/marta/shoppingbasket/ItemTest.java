@@ -44,5 +44,14 @@ public class ItemTest {
         assertEquals(false, item1.quantityDivisableByTwo());
     }
 
+    @Test
+    public void testApplyTwoForOneDiscount() {
+        assertEquals(24, item.applyTwoForOneDiscount(), 0.0);
+    }
+
+    @Test
+    public void testApplyTwoForOneDiscountWithModulus() {
+        assertEquals(12, item1.applyDiscountTwoForOneWithModulus(), 0.0);
+    }
 
 }
