@@ -34,24 +34,29 @@ public class ItemTest {
         assertEquals(4, item.getQuantity());
     }
 
-    @Test
-    public void testReturnsTrueIfQuantityDivisibleByTwo() {
-        assertEquals(true, item.quantityDivisableByTwo());
-    }
-
-    @Test
-    public void testReturnsFalseIfQuantityNotDivisiableByTwo() {
-        assertEquals(false, item1.quantityDivisableByTwo());
-    }
+//    @Test
+//    public void testReturnsTrueIfQuantityDivisibleByTwo() {
+//        assertEquals(true, item.quantityDivisableByTwo());
+//    }
+//
+//    @Test
+//    public void testReturnsFalseIfQuantityNotDivisiableByTwo() {
+//        assertEquals(false, item1.quantityDivisableByTwo());
+//    }
+//
+//    @Test
+//    public void testApplyTwoForOneDiscountNoModulus() {
+//        assertEquals(24, item.applyTwoForOneDiscountNoModulus(), 0.0);
+//    }
+//
+//    @Test
+//    public void testApplyTwoForOneDiscountWithModulus() {
+//        assertEquals(12, item1.applyDiscountTwoForOneWithModulus(), 0.0);
+//    }
 
     @Test
     public void testApplyTwoForOneDiscount() {
         assertEquals(24, item.applyTwoForOneDiscount(), 0.0);
+        assertEquals(12, item1.applyTwoForOneDiscount(), 0.0);
     }
-
-    @Test
-    public void testApplyTwoForOneDiscountWithModulus() {
-        assertEquals(12, item1.applyDiscountTwoForOneWithModulus(), 0.0);
-    }
-
 }

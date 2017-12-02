@@ -29,28 +29,38 @@ public class Item implements Purchasable, Discountable {
     }
 
 
-    public boolean quantityDivisableByTwo() {
-        if (quantity % 2 == 0) {
-            return true;
-        }
-        return false;
-    }
+//    public boolean quantityDivisableByTwo() {
+//        if (quantity % 2 == 0) {
+//            return true;
+//        }
+//        return false;
+//    }
+//
+//    public double applyTwoForOneDiscountNoModulus() {
+//        double totalPrice = 0.0;
+//        totalPrice = ((quantity / 2) * price);
+//        return totalPrice;
+//    }
+//
+//    public double applyDiscountTwoForOneWithModulus() {
+//        double totalPrice = 0.0;
+//        totalPrice = ((((quantity - 1) / 2) + 1) * price);
+//        return totalPrice;
+//    }
+//
+//    public void applyTwoForOneDiscount() {
+//        if (quantityDivisableByTwo() == true) {
+//            applyDiscountTwoForOneWithModulus();
+//            applyTwoForOneDiscountNoModulus();
+//        }
+//    }
 
     public double applyTwoForOneDiscount() {
-        double totalPrice = 0.0;
-        if (quantityDivisableByTwo() == true) {
+        double totalPrice = 0;
+        if (quantity % 2 == 0) {
             totalPrice = ((quantity / 2) * price);
-        }
+        } else totalPrice = ((((quantity - 1) / 2) + 1) * price);
         return totalPrice;
     }
-
-    public double applyDiscountTwoForOneWithModulus() {
-        double totalPrice = 0.0;
-        if (quantityDivisableByTwo() == false) {
-            totalPrice = ((((quantity - 1)/2) + 1) * price);
-        }
-        return totalPrice;
-    }
-
 
 }
