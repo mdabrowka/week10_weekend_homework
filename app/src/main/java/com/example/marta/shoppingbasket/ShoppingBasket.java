@@ -40,4 +40,10 @@ public class ShoppingBasket {
         return total;
     }
 
+////    public void checkifanyitemsappeartwiceormoeinthebasket
+//    iterate over boughtItems and store the data in a hashmap to know
+////            how many of each items you have
+//    if any items are 2 or more then apply discout on those
+
+
 }
