@@ -11,11 +11,12 @@ import static junit.framework.Assert.assertFalse;
  */
 
 public class ItemTest {
-    Item item;
+    Item item, item1;
 
     @Before
     public void before() {
         item = new Item(12, "shoelaces", 4);
+        item1 = new Item(6, "toothpaste", 3);
     }
 
     @Test
@@ -32,5 +33,16 @@ public class ItemTest {
     public void testCanGetQuantity() {
         assertEquals(4, item.getQuantity());
     }
+
+    @Test
+    public void testReturnsTrueIfQuantityDivisibleByTwo() {
+        assertEquals(true, item.quantityDivisableByTwo());
+    }
+
+    @Test
+    public void testReturnsFalseIfQuantityNotDivisiableByTwo() {
+        assertEquals(false, item1.quantityDivisableByTwo());
+    }
+
 
 }
