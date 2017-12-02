@@ -8,4 +8,6 @@ public interface Discountable {
 
     public void applyTwoForOneDiscount();
 
+    public void apply10PercentDiscount();
+
 }

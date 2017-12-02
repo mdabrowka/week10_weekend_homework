@@ -7,10 +7,12 @@ package com.example.marta.shoppingbasket;
 public class Item implements Purchasable {
     private double price;
     private String type;
+    private int quantity;
 
-    public Item(double price, String type) {
+    public Item(double price, String type, int quantity) {
         this.price = price;
         this.type = type;
+        this.quantity = quantity;
     }
 
     public double getPrice() {
@@ -20,5 +22,9 @@ public class Item implements Purchasable {
 
     public String getType() {
         return this.type;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
     }
 }

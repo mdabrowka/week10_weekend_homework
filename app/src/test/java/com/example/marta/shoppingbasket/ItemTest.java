@@ -15,7 +15,7 @@ public class ItemTest {
 
     @Before
     public void before() {
-        item = new Item(12, "shoelaces");
+        item = new Item(12, "shoelaces", 4);
     }
 
     @Test
@@ -26,6 +26,11 @@ public class ItemTest {
     @Test
     public void testCanGetType() {
         assertEquals("shoelaces", item.getType());
+    }
+
+    @Test
+    public void testCanGetQuantity() {
+        assertEquals(4, item.getQuantity());
     }
 
 }

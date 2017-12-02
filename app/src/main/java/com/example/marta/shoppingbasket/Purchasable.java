@@ -9,4 +9,6 @@ public interface Purchasable {
     public double getPrice();
 
     public String getType();
+
+    public int getQuantity();
 }
