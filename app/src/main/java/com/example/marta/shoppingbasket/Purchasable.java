@@ -11,4 +11,6 @@ public interface Purchasable {
     public String getType();
 
     public int getQuantity();
+
+//    public double calculatePriceAfterTwoForOneDiscount();
 }

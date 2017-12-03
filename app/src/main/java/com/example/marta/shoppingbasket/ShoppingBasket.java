@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 public class ShoppingBasket {
-    private ArrayList<Purchasable> boughtItems;
+    private ArrayList<Item> boughtItems;
 
 
 
@@ -20,11 +20,11 @@ public class ShoppingBasket {
       return boughtItems.size();
     }
 
-    public void add(Purchasable item) {
+    public void add(Item item) {
         boughtItems.add(item);
     }
 
-    public void remove(Purchasable item) {
+    public void remove(Item item) {
         boughtItems.remove(item);
     }
 
@@ -32,18 +32,17 @@ public class ShoppingBasket {
         boughtItems.clear();
     }
 
-    public double totalPrice() {
+    public double totalPriceAfterDiscount() {
         double total = 0;
-        for (Purchasable item : boughtItems) {
-          total += item.getPrice();
+        for (Discountable item : boughtItems) {
+          total += item.calculatePriceAfterTwoForOneDiscount();
         }
         return total;
     }
 
-////    public void checkifanyitemsappeartwiceormoeinthebasket
-//    iterate over boughtItems and store the data in a hashmap to know
-////            how many of each items you have
-//    if any items are 2 or more then apply discout on those
+
+
+
 
 
 }

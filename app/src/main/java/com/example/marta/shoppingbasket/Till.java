@@ -5,4 +5,14 @@ package com.example.marta.shoppingbasket;
  */
 
 public class Till {
+    ShoppingBasket basket;
+    Customer customer;
+
+
+    public void calculateBasketFullPrice(ShoppingBasket basket) {
+
+    }
+
+
+
 }

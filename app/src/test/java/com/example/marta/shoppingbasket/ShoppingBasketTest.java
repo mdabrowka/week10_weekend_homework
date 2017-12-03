@@ -53,12 +53,12 @@ public class ShoppingBasketTest {
         assertEquals(0, basket.numberOfItems());
     }
 
-    @Test
-    public void testCanCalculateTotal() {
-        basket.add(item1);
-        basket.add(item2);
-        basket.add(item3);
-        assertEquals(22, basket.totalPrice(), 0.0);
-    }
+//    @Test
+//    public void testCanCalculateTotal() {
+//        basket.add(item1);
+//        basket.add(item2);
+//        basket.add(item3);
+//        assertEquals(22, basket.totalPrice(), 0.0);
+//    }
 
 }
