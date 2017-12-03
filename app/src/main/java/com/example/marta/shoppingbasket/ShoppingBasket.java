@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class ShoppingBasket {
     private ArrayList<Item> boughtItems;
+    Customer customer;
 
 
 
@@ -41,7 +42,22 @@ public class ShoppingBasket {
     }
 
 
+    public double totalPriceAfterTenPercentOffDiscount() {
+        double total = totalPriceAfterDiscount();
+        if (total >= 20) {
+            total = 0.9 * total;
+        }
+        return total;
+    }
 
+
+    public double totalPriceAfterLoyaltyCardDiscount(Customer customer) {
+        double total = totalPriceAfterTenPercentOffDiscount();
+        if (customer.isLoyal() == true) {
+            total = 0.98 * total;
+        }
+        return total;
+    }
 
 
 
