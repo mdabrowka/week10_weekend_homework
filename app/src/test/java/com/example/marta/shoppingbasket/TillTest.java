@@ -3,6 +3,8 @@ package com.example.marta.shoppingbasket;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertEquals;
+
 /**
  * Created by marta on 03/12/2017.
  */
@@ -29,20 +31,20 @@ public class TillTest {
     public void testCanCalculateTenPercentDiscount() {
         basket.add(item1);
         basket.add(item2);
-        assertEquals(36, basket.totalPriceAfterTenPercentOffDiscount(), 0.0);
+        assertEquals(36, till.totalPriceAfterTenPercentOffDiscount(basket), 0.0);
     }
 
     @Test
     public void testWillNotApplyDiscountIfTotalUnder20() {
         basket.add(item3);
-        assertEquals(14, basket.totalPriceAfterTenPercentOffDiscount(), 0.0);
+        assertEquals(14, till.totalPriceAfterTenPercentOffDiscount(basket), 0.0);
     }
 
     @Test
     public void testCanCalculateLoyaltyCardDiscount() {
         basket.add(item1);
         basket.add(item2);
-        assertEquals(35.28, basket.totalPriceAfterLoyaltyCardDiscount(customer), 0.0);
+        assertEquals(35.28, till.totalPriceAfterLoyaltyCardDiscount(basket, customer), 0.0);
     }
 
 
