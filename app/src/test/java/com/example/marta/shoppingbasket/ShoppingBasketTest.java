@@ -12,7 +12,7 @@ import static junit.framework.Assert.assertEquals;
 
 public class ShoppingBasketTest {
     ShoppingBasket basket;
-    Purchasable item1, item2, item3;
+    Item item1, item2, item3;
 
 
     @Before
@@ -53,12 +53,11 @@ public class ShoppingBasketTest {
         assertEquals(0, basket.numberOfItems());
     }
 
-//    @Test
-//    public void testCanCalculateTotal() {
-//        basket.add(item1);
-//        basket.add(item2);
-//        basket.add(item3);
-//        assertEquals(22, basket.totalPrice(), 0.0);
-//    }
+    @Test
+    public void testCanCalculateTotalAfterTwoForOneDiscount() {
+        basket.add(item1);
+        basket.add(item2);
+        assertEquals(40, basket.totalPriceAfterDiscount(), 0.0);
+    }
 
 }

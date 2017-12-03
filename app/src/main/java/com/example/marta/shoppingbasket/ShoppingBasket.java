@@ -34,7 +34,7 @@ public class ShoppingBasket {
 
     public double totalPriceAfterDiscount() {
         double total = 0;
-        for (Discountable item : boughtItems) {
+        for (Item item : boughtItems) {
           total += item.calculatePriceAfterTwoForOneDiscount();
         }
         return total;
